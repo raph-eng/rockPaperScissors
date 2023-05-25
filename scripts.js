@@ -8,6 +8,19 @@ function getComputerMove() {
   return moves[Math.floor(Math.random() * 3)];
 }
 
+function displayResult(playerMove, computerMove) {
+  if (playerMove === computerMove) {
+    result.textContent = `CPU: ${computerMove} - TIE`;
+    /* All possible winning outcomes for the Player */
+  } else if ((playerMove === "rock" && computerMove === "scissors") ||
+            (playerMove === "scissors" && computerMove === "paper") ||
+            (playerMove === "paper" && computerMove === "rock")) {
+              result.textContent = `CPU: ${computerMove} - YOU WIN!`;
+              /* The remaining outcomes are all losses for the Player */
+            } else {
+              result.textContent = `CPU: ${computerMove} - YOU LOSE!`;
+            }
+}
 
 document.getElementById("rock").addEventListener("click", function(){
   playerMove = "rock";
@@ -26,8 +39,3 @@ document.getElementById("scissors").addEventListener("click", function(){
 
 console.log(getComputerMove());
 
-function displayResult(playerMove, computerMove) {
-  if (playerMove === computerMove) {
-
-  }
-}
