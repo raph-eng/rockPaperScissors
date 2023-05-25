@@ -1,11 +1,13 @@
 const moves = ["rock", "paper", "scissors"];
 
+let result = document.getElementById('game-result');
 let computerMove;
 let playerMove;
 
 function getComputerMove() {
   return moves[Math.floor(Math.random() * 3)];
 }
+
 
 document.getElementById("rock").addEventListener("click", function(){
   playerMove = "rock";
@@ -23,3 +25,9 @@ document.getElementById("scissors").addEventListener("click", function(){
 });
 
 console.log(getComputerMove());
+
+function displayResult(playerMove, computerMove) {
+  if (playerMove === computerMove) {
+
+  }
+}
