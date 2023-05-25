@@ -1,18 +1,25 @@
-const moves = {
-  "rock": 0,
-  "paper": 1,
-  "scissors": 2
-};
+const moves = ["rock", "paper", "scissors"];
 
 let computerMove;
 let playerMove;
+
 function getComputerMove() {
-  return Math.floor(Math.random() * 3);
+  return moves[Math.floor(Math.random() * 3)];
 }
 
+document.getElementById("rock").addEventListener("click", function(){
+  playerMove = "rock";
+  computerMove = getComputerMove();
+});
 
-document.getElementById("rock")
-document.getElementById("paper")
-document.getElementById("scissors")
+document.getElementById("paper").addEventListener("click", function(){
+  playerMove = "paper";
+  computerMove = getComputerMove();
+});
+
+document.getElementById("scissors").addEventListener("click", function(){
+  playerMove = "scissors";
+  computerMove = getComputerMove();
+});
 
 console.log(getComputerMove());
