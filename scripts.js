@@ -8,7 +8,7 @@ function getComputerMove() {
   return moves[Math.floor(Math.random() * 3)];
 }
 
-function displayResult(playerMove, computerMove) {
+function showResult(playerMove, computerMove) {
   if (playerMove === computerMove) {
     result.textContent = `CPU: ${computerMove} - TIE`;
     /* All possible winning outcomes for the Player */
@@ -25,17 +25,17 @@ function displayResult(playerMove, computerMove) {
 document.getElementById("rock").addEventListener("click", function(){
   playerMove = "rock";
   computerMove = getComputerMove();
+  showResult(playerMove, computerMove);
 });
 
 document.getElementById("paper").addEventListener("click", function(){
   playerMove = "paper";
   computerMove = getComputerMove();
+  showResult(playerMove, computerMove);
 });
 
 document.getElementById("scissors").addEventListener("click", function(){
   playerMove = "scissors";
   computerMove = getComputerMove();
+  showResult(playerMove, computerMove);
 });
-
-console.log(getComputerMove());
-
