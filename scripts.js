@@ -22,6 +22,7 @@ function showResult(playerMove, computerMove) {
             }
 }
 
+/* Add event listeners that'll then call showResult to print the game outcome onto the page */
 document.getElementById("rock").addEventListener("click", function(){
   playerMove = "rock";
   computerMove = getComputerMove();
