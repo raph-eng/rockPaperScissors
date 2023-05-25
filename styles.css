@@ -4,7 +4,12 @@
 
 body {
   padding: 20px 100px;
-  margin: 20px 100px;
+  margin: 20px 300px;
+}
+
+.title-centered {
+  font-size: 2em;
+  text-align: center;
 }
 
 #player-moves {
@@ -15,6 +20,10 @@ body {
 #rock,
 #paper,
 #scissors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 
 
